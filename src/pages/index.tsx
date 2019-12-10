@@ -66,16 +66,16 @@ const IndexPage = () => {
 
   const currentTime = new Date()
   const today = getDate(currentTime)
-  const tommorow = getDate(addDays(currentTime, 1))
+  const tomorrow = getDate(addDays(currentTime, 1))
 
   const allTimeSlots = getTimesForAreaAtStage(area, stage)
 
   const todayTimeslots = allTimeSlots[today]
-  const tommorowTimeslots = allTimeSlots[tommorow]
+  const tomorrowTimeslots = allTimeSlots[tomorrow]
 
   const todayStrings = buildFriendlyStringsBasedOnTimeslots(todayTimeslots)
-  const tommorowStrings = buildFriendlyStringsBasedOnTimeslots(
-    tommorowTimeslots
+  const tomorrowStrings = buildFriendlyStringsBasedOnTimeslots(
+    tomorrowTimeslots
   )
 
   const fullMonth = buildFullMonthDayStrings(allTimeSlots)
@@ -108,10 +108,10 @@ const IndexPage = () => {
         <p>None</p>
       )}
 
-      <h2>Tommorow</h2>
-      {tommorowStrings.length > 0 ? (
+      <h2>Tomorrow</h2>
+      {tomorrowStrings.length > 0 ? (
         <ul>
-          {tommorowStrings.map(item => (
+          {tomorrowStrings.map(item => (
             <li>{item}</li>
           ))}
         </ul>
