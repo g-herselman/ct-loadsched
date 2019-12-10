@@ -23,7 +23,7 @@ module.exports = {
         name: `Cape Town LoadSched`,
         short_name: `LoadSched`,
         start_url: `/`,
-        background_color: `#0099cc`,
+        background_color: `#111111`,
         theme_color: `#0099cc`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
