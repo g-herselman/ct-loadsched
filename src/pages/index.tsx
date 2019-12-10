@@ -49,8 +49,8 @@ const fromStorageOrDefault = (key, def) =>
   (typeof localStorage !== "undefined" && localStorage.getItem(key)) || def
 
 const IndexPage = () => {
-  const [stage, setStage] = useState(fromStorageOrDefault("stage", 1))
-  const [area, setArea] = useState(fromStorageOrDefault("area", 1))
+  const [stage, setStage] = useState(+fromStorageOrDefault("stage", 1))
+  const [area, setArea] = useState(+fromStorageOrDefault("area", 1))
 
   const handleStageSet = e => {
     const value = +e.target.value
